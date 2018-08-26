@@ -1,4 +1,4 @@
-declare namespace vzFileTemplates {
+declare module 'vz-file-templates-api' {
     interface IProjectItemTemplateRunSettings {
         destPath: string;
         getTextReplacement(key: string): string;

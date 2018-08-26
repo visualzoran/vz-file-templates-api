@@ -1,6 +1,6 @@
 'use strict';
 
-namespace vzFileTemplates {
+declare module 'vz-file-templates-api' {
 
     export interface IProjectItemTemplateRunSettings {
         destPath : string;
