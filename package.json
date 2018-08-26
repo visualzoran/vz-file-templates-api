@@ -1,0 +1,23 @@
+{
+  "name": "vz-file-templates-api",
+  "version": "0.0.6",
+  "description": "Public interfaces exposed by VZ File Templates extension for Visual Studio Code",
+  "main": "lib/vzFileTemplatesInterfaces.js",
+  "types": "lib/vzFileTemplatesInterfaces.d.ts",
+  "repository": {
+    "url": "https://github.com/visualzoran/vz-file-templates-api"
+  },  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "vz-file-templates"
+  ],
+  "author": "VisualZoran",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^2.6.1"
+  }
+}
