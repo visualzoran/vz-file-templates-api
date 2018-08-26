@@ -1,6 +1,6 @@
 'use strict';
 
-declare module 'vz-file-templates-api' {
+declare module 'vz-file-templates' {
 
     export interface IProjectItemTemplateRunSettings {
         destPath : string;

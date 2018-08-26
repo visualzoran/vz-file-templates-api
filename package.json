@@ -1,5 +1,5 @@
 {
-  "name": "vz-file-templates-api",
+  "name": "vz-file-templates",
   "version": "0.0.6",
   "description": "Public interfaces exposed by VZ File Templates extension for Visual Studio Code",
   "main": "lib/vzFileTemplatesInterfaces.js",
