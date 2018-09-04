@@ -6,6 +6,10 @@ declare module 'vz-file-templates' {
         getInputNameVariable(): string;
         getFileInputNameVariable(): string;
         applyReplacements(value: string): string;
+        outputChannel: ITemplateOutputChannel;
+        command: string;
+        commandParameters: string[];
+        setCommand(newCommand: string, newCommandParameters: string[]): void;
     }
     interface IProjectItemTemplate {
         run(settings: IProjectItemTemplateRunSettings): boolean;
@@ -17,5 +21,11 @@ declare module 'vz-file-templates' {
     interface IVZFileTemplatesApi {
         registerTemplatesFolder(folderPath: string): void;
         registerWizard(wizard: IProjectItemWizard): void;
+    }
+    interface ITemplateOutputChannel {
+        write(value: string): void;
+        writeLine(value: string): void;
+        show(): void;
+        hide(): void;
     }
 }
