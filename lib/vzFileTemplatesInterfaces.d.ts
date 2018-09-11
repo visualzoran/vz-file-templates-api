@@ -3,6 +3,8 @@ declare module 'vz-file-templates' {
         destPath: string;
         getTextReplacement(key: string): string;
         setTextReplacement(key: string, value: string): void;
+        getVariable(name: string): string;
+        setVariable(name: string, value: string): void;
         getInputNameVariable(): string;
         getFileInputNameVariable(): string;
         applyReplacements(value: string): string;
@@ -14,6 +16,10 @@ declare module 'vz-file-templates' {
     interface IProjectItemTemplate {
         run(settings: IProjectItemTemplateRunSettings): boolean;
     }
+    interface ITemplateRunSettingsProcessor {
+        getName(): string;
+        processSettings(settings: IProjectItemTemplateRunSettings): void;
+    }
     interface IProjectItemWizard {
         getName(): string;
         run(template: IProjectItemTemplate, settings: IProjectItemTemplateRunSettings): void;
@@ -21,6 +27,7 @@ declare module 'vz-file-templates' {
     interface IVZFileTemplatesApi {
         registerTemplatesFolder(folderPath: string): void;
         registerWizard(wizard: IProjectItemWizard): void;
+        registerRunSettingsProcessor(settingsProcessor: ITemplateRunSettingsProcessor): void;
     }
     interface ITemplateOutputChannel {
         write(value: string): void;
